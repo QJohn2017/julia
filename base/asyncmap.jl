@@ -4,7 +4,7 @@
 """
     AsyncCollector(f, results, c...; ntasks=100) -> iterator
 
-Apply f to each element of c using at most max(100, nworkers()) asynchronous
+Apply f to each element of c using at most `max(100, nworkers())` asynchronous
 tasks.
 For multiple collection arguments, apply f elementwise.
 Output is collected into "results".
