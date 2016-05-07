@@ -1,0 +1,417 @@
+~/julia$ make -j4 
+    PERL base/version_git.jl.phony
+    JULIA usr/lib/julia/sys.o
+exports.jl
+essentials.jl
+base.jl
+generator.jl
+reflection.jl
+options.jl
+promotion.jl
+tuple.jl
+range.jl
+expr.jl
+error.jl
+bool.jl
+WARNING: New definition 
+    promote_op(Base.#^, Type{Bool}, Type{#T<:Integer}) at bool.jl:64
+is ambiguous with: 
+    promote_op(Any, Type{Bool}, Type{Bool}) at bool.jl:63.
+To fix, define 
+    promote_op(Base.#^, Type{Bool}, Type{Bool})
+before the new definition.
+number.jl
+int.jl
+operators.jl
+pointer.jl
+refpointer.jl
+WARNING: Method definition (::Type{#T<:Any})(Any) in module Inference at coreimg.jl:44 overwritten in module Base at sysimg.jl:50.
+checked.jl
+abstractarray.jl
+subarray.jl
+WARNING: New definition 
+    similar(Base.SubArray, Any, Tuple{Vararg{Int64, N<:Any}}) at subarray.jl:70
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Int64, N<:Any}}) at abstractarray.jl:159.
+To fix, define 
+    similar(Base.SubArray, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Base.SubArray, Any, Tuple{Vararg{Int64, N<:Any}}) at subarray.jl:70
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:158.
+To fix, define 
+    similar(Base.SubArray, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+array.jl
+WARNING: New definition 
+    similar(Array, Any, Tuple{Vararg{Int64, N<:Any}}) at array.jl:120
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Int64, N<:Any}}) at abstractarray.jl:159.
+To fix, define 
+    similar(Array, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Array, Any, Tuple{Vararg{Int64, N<:Any}}) at array.jl:120
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:158.
+To fix, define 
+    similar(Array, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 1}, Any) at array.jl:125
+is ambiguous with: 
+    similar(AbstractArray, Type) at abstractarray.jl:153.
+To fix, define 
+    similar(Array{T<:Any, 1}, Type)
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 1}, Any) at array.jl:125
+is ambiguous with: 
+    similar(AbstractArray{#T<:Any, N<:Any}, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:154.
+To fix, define 
+    similar(Array{#T<:Any, 1}, Tuple{Vararg{Integer, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 1}, Any) at array.jl:125
+is ambiguous with: 
+    similar(AbstractArray{#T<:Any, N<:Any}, Integer...) at abstractarray.jl:155.
+To fix, define 
+    similar(Array{#T<:Any, 1}, Integer)
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 1}, Any) at array.jl:125
+is ambiguous with: 
+    similar(AbstractArray, Type, Integer...) at abstractarray.jl:156.
+To fix, define 
+    similar(Array{T<:Any, 1}, Type)
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 2}, Any) at array.jl:128
+is ambiguous with: 
+    similar(AbstractArray, Type) at abstractarray.jl:153.
+To fix, define 
+    similar(Array{T<:Any, 2}, Type)
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 2}, Any) at array.jl:128
+is ambiguous with: 
+    similar(AbstractArray{#T<:Any, N<:Any}, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:154.
+To fix, define 
+    similar(Array{#T<:Any, 2}, Tuple{Vararg{Integer, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 2}, Any) at array.jl:128
+is ambiguous with: 
+    similar(AbstractArray{#T<:Any, N<:Any}, Integer...) at abstractarray.jl:155.
+To fix, define 
+    similar(Array{#T<:Any, 2}, Integer)
+before the new definition.
+WARNING: New definition 
+    similar(Array{#T<:Any, 2}, Any) at array.jl:128
+is ambiguous with: 
+    similar(AbstractArray, Type, Integer...) at abstractarray.jl:156.
+To fix, define 
+    similar(Array{T<:Any, 2}, Type)
+before the new definition.
+hashing.jl
+rounding.jl
+float.jl
+complex.jl
+rational.jl
+WARNING: New definition 
+    round(Type{#T<:Any}, Base.Rational{Bool}, Base.Rounding.RoundingMode) at rational.jl:343
+is ambiguous with: 
+    round(Type{#T<:Any}, Base.Rational{#Tr<:Any}, Base.Rounding.RoundingMode{:Nearest}) at rational.jl:293.
+To fix, define 
+    round(Type{#T<:Any}, Base.Rational{Bool}, Base.Rounding.RoundingMode{:Nearest})
+before the new definition.
+WARNING: New definition 
+    round(Type{#T<:Any}, Base.Rational{Bool}, Base.Rounding.RoundingMode) at rational.jl:343
+is ambiguous with: 
+    round(Type{#T<:Any}, Base.Rational{#Tr<:Any}, Base.Rounding.RoundingMode{:NearestTiesAway}) at rational.jl:309.
+To fix, define 
+    round(Type{#T<:Any}, Base.Rational{Bool}, Base.Rounding.RoundingMode{:NearestTiesAway})
+before the new definition.
+WARNING: New definition 
+    round(Type{#T<:Any}, Base.Rational{Bool}, Base.Rounding.RoundingMode) at rational.jl:343
+is ambiguous with: 
+    round(Type{#T<:Any}, Base.Rational{#Tr<:Any}, Base.Rounding.RoundingMode{:NearestTiesUp}) at rational.jl:323.
+To fix, define 
+    round(Type{#T<:Any}, Base.Rational{Bool}, Base.Rounding.RoundingMode{:NearestTiesUp})
+before the new definition.
+multinverses.jl
+abstractarraymath.jl
+arraymath.jl
+simdloop.jl
+reduce.jl
+reshapedarray.jl
+WARNING: New definition 
+    similar(Base.ReshapedArray, Type, Any...) at reshapedarray.jl:75
+is ambiguous with: 
+    similar(AbstractArray, Type, Integer...) at abstractarray.jl:156.
+To fix, define 
+    similar(Base.ReshapedArray, Type, Integer...)
+before the new definition.
+WARNING: New definition 
+    similar(Base.ReshapedArray, Type, Any...) at reshapedarray.jl:75
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Int64, N<:Any}}) at abstractarray.jl:159.
+To fix, define 
+    similar(Base.ReshapedArray, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Base.ReshapedArray, Type, Any...) at reshapedarray.jl:75
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:158.
+To fix, define 
+    similar(Base.ReshapedArray, Type, Tuple{Vararg{Integer, N<:Any}})
+before the new definition.
+bitarray.jl
+intset.jl
+dict.jl
+set.jl
+iterator.jl
+build_h.jl
+version_git.jl
+osutils.jl
+c.jl
+io.jl
+iostream.jl
+iobuffer.jl
+char.jl
+ascii.jl
+string.jl
+strings/types.jl
+strings/basic.jl
+strings/search.jl
+strings/util.jl
+strings/io.jl
+unicode.jl
+unicode/UnicodeError.jl
+unicode/types.jl
+unicode/checkstring.jl
+unicode/utf8.jl
+unicode/utf16.jl
+unicode/utf32.jl
+unicode/utf8proc.jl
+parse.jl
+shell.jl
+regex.jl
+pcre.jl
+show.jl
+base64.jl
+libc.jl
+libdl.jl
+env.jl
+intfuncs.jl
+nullable.jl
+libuv.jl
+uv_constants.jl
+event.jl
+task.jl
+lock.jl
+stream.jl
+socket.jl
+filesystem.jl
+process.jl
+multimedia.jl
+grisu.jl
+methodshow.jl
+floatfuncs.jl
+math.jl
+float16.jl
+cartesian.jl
+multidimensional.jl
+WARNING: New definition 
+    _internal_checkbounds(AbstractArray{#T<:Any, 1}, Union{Base.Colon, AbstractArray, Number}) at multidimensional.jl:207
+is ambiguous with: 
+    _internal_checkbounds(AbstractArray, AbstractArray{Bool, 1}) at abstractarray.jl:140.
+To fix, define 
+    _internal_checkbounds(AbstractArray{T<:Any, 1}, AbstractArray{Bool, 1})
+before the new definition.
+WARNING: New definition 
+    _internal_checkbounds(AbstractArray{#T<:Any, 1}, Union{Base.Colon, AbstractArray, Number}) at multidimensional.jl:207
+is ambiguous with: 
+    _internal_checkbounds(AbstractArray, AbstractArray{Bool, N<:Any}) at abstractarray.jl:139.
+To fix, define 
+    _internal_checkbounds(AbstractArray{T<:Any, 1}, AbstractArray{Bool, N<:Any})
+before the new definition.
+permuteddimsarray.jl
+primes.jl
+reducedim.jl
+ordering.jl
+collections.jl
+sort.jl
+version.jl
+gmp.jl
+mpfr.jl
+combinatorics.jl
+hashing2.jl
+dSFMT.jl
+random.jl
+printf.jl
+meta.jl
+Enums.jl
+serialize.jl
+channels.jl
+multi.jl
+workerpool.jl
+pmap.jl
+managers.jl
+asyncmap.jl
+loading.jl
+mmap.jl
+sharedarray.jl
+WARNING: New definition 
+    similar(Base.SharedArray, Any, Tuple{Vararg{Int64, N<:Any}}) at sharedarray.jl:433
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Int64, N<:Any}}) at abstractarray.jl:159.
+To fix, define 
+    similar(Base.SharedArray, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Base.SharedArray, Any, Tuple{Vararg{Int64, N<:Any}}) at sharedarray.jl:433
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:158.
+To fix, define 
+    similar(Base.SharedArray, Type, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Base.SharedArray, Any) at sharedarray.jl:434
+is ambiguous with: 
+    similar(AbstractArray, Type) at abstractarray.jl:153.
+To fix, define 
+    similar(Base.SharedArray, Type)
+before the new definition.
+WARNING: New definition 
+    similar(Base.SharedArray, Any) at sharedarray.jl:434
+is ambiguous with: 
+    similar(AbstractArray{#T<:Any, N<:Any}, Tuple{Vararg{Integer, N<:Any}}) at abstractarray.jl:154.
+To fix, define 
+    similar(Base.SharedArray{#T<:Any, N<:Any}, Tuple{Vararg{Integer, N<:Any}})
+before the new definition.
+WARNING: New definition 
+    similar(Base.SharedArray, Any) at sharedarray.jl:434
+is ambiguous with: 
+    similar(AbstractArray{#T<:Any, N<:Any}, Integer...) at abstractarray.jl:155.
+To fix, define 
+    similar(Base.SharedArray{#T<:Any, N<:Any}, Integer)
+before the new definition.
+WARNING: New definition 
+    similar(Base.SharedArray, Any) at sharedarray.jl:434
+is ambiguous with: 
+    similar(AbstractArray, Type, Integer...) at abstractarray.jl:156.
+To fix, define 
+    similar(Base.SharedArray, Type)
+before the new definition.
+datafmt.jl
+deepcopy.jl
+interactiveutil.jl
+replutil.jl
+test.jl
+i18n.jl
+initdefs.jl
+Terminals.jl
+LineEdit.jl
+REPLCompletions.jl
+REPL.jl
+client.jl
+util.jl
+linalg.jl
+WARNING: New definition 
+    size(Base.LinAlg.LowerTriangular, Any...) at linalg/triangular.jl:20
+is ambiguous with: 
+    size(Any, Integer, Integer, Integer...) at abstractarray.jl:23.
+To fix, define 
+    size(Base.LinAlg.LowerTriangular, Integer, Integer, Integer...)
+before the new definition.
+WARNING: New definition 
+    size(Base.LinAlg.UnitLowerTriangular, Any...) at linalg/triangular.jl:20
+is ambiguous with: 
+    size(Any, Integer, Integer, Integer...) at abstractarray.jl:23.
+To fix, define 
+    size(Base.LinAlg.UnitLowerTriangular, Integer, Integer, Integer...)
+before the new definition.
+WARNING: New definition 
+    size(Base.LinAlg.UpperTriangular, Any...) at linalg/triangular.jl:20
+is ambiguous with: 
+    size(Any, Integer, Integer, Integer...) at abstractarray.jl:23.
+To fix, define 
+    size(Base.LinAlg.UpperTriangular, Integer, Integer, Integer...)
+before the new definition.
+WARNING: New definition 
+    size(Base.LinAlg.UnitUpperTriangular, Any...) at linalg/triangular.jl:20
+is ambiguous with: 
+    size(Any, Integer, Integer, Integer...) at abstractarray.jl:23.
+To fix, define 
+    size(Base.LinAlg.UnitUpperTriangular, Integer, Integer, Integer...)
+before the new definition.
+WARNING: New definition 
+    size(Base.LinAlg.HessenbergQ, Any...) at linalg/hessenberg.jl:36
+is ambiguous with: 
+    size(Any, Integer, Integer, Integer...) at abstractarray.jl:23.
+To fix, define 
+    size(Base.LinAlg.HessenbergQ, Integer, Integer, Integer...)
+before the new definition.
+WARNING: New definition 
+    size(Union{Base.LinAlg.Hermitian{T<:Any, S<:Any}, Base.LinAlg.Symmetric{T<:Any, S<:Any}}, Any...) at linalg/symmetric.jl:25
+is ambiguous with: 
+    size(Any, Integer, Integer, Integer...) at abstractarray.jl:23.
+To fix, define 
+    size(Union{Base.LinAlg.Hermitian{T<:Any, S<:Any}, Base.LinAlg.Symmetric{T<:Any, S<:Any}}, Integer, Integer, Integer...)
+before the new definition.
+broadcast.jl
+statistics.jl
+irrationals.jl
+WARNING: New definition 
+    log(Base.Irrational{:e}, Any) at irrationals.jl:130
+is ambiguous with: 
+    log(#T<:Number, #T<:Number) at math.jl:101.
+To fix, define 
+    log(Base.Irrational{:e}, Base.Irrational{:e})
+before the new definition.
+WARNING: New definition 
+    log(Base.Irrational{:e}, Any) at irrationals.jl:130
+is ambiguous with: 
+    log(Number, Number) at math.jl:102.
+To fix, define 
+    log(Base.Irrational{:e}, Number)
+before the new definition.
+WARNING: New definition 
+    log(Base.Irrational{:e}, Any) at irrationals.jl:130
+is ambiguous with: 
+    log(#T1<:Number, AbstractArray{#T2<:Number, N<:Any}) at operators.jl:484.
+To fix, define 
+    log(Base.Irrational{:e}, AbstractArray{#T2<:Number, N<:Any})
+before the new definition.
+dft.jl
+dsp.jl
+sysinfo.jl
+quadgk.jl
+fastmath.jl
+libgit2.jl
+pkg.jl
+stacktraces.jl
+profile.jl
+Dates.jl
+sparse.jl
+WARNING: New definition 
+    similar(Base.SparseArrays.SparseMatrixCSC, Type{#Tv<:Any}, Tuple{Vararg{Integer, #N<:Any}}) at sparse/sparsematrix.jl:244
+is ambiguous with: 
+    similar(AbstractArray, Type, Tuple{Vararg{Int64, N<:Any}}) at abstractarray.jl:159.
+To fix, define 
+    similar(Base.SparseArrays.SparseMatrixCSC, Type{T<:Any}, Tuple{Vararg{Int64, N<:Any}})
+before the new definition.
+threads.jl
+threadcall.jl
+deprecated.jl
+require.jl
+docs/helpdb.jl
+docs/helpdb/Base.jl
+docs/helpdb/Dates.jl
+docs/basedocs.jl
+markdown/Markdown.jl
+docs/Docs.jl
+/Volumes/Lion/Users/jameson/Documents/julia/base/precompile.jl
+
