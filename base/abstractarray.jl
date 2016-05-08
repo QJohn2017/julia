@@ -438,7 +438,8 @@ convert{T,N  }(::Type{AbstractArray{T,N}}, A::AbstractArray{T,N}) = A
 convert{T,S,N}(::Type{AbstractArray{T,N}}, A::AbstractArray{S,N}) = copy!(similar(A,T), A)
 convert{T,S,N}(::Type{AbstractArray{T  }}, A::AbstractArray{S,N}) = convert(AbstractArray{T,N}, A)
 
-convert{T,N}(::Type{Array}, A::AbstractArray{T,N}) = convert(Array{T,N}, A)
+convert{T,N  }(::Type{Array}, A::AbstractArray{T,N}) = convert(Array{T,N}, A)
+convert{T,S,N}(::Type{Array{T}}, A::AbstractArray{S,N}) = convert(Array{T,N}, A)
 
 full(x::AbstractArray) = x
 
