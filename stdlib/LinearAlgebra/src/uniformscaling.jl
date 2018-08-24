@@ -228,6 +228,7 @@ Broadcast.broadcasted(::typeof(*), x::Number,J::UniformScaling) = UniformScaling
 Broadcast.broadcasted(::typeof(*), J::UniformScaling,x::Number) = UniformScaling(J.λ*x)
 
 Broadcast.broadcasted(::typeof(/), J::UniformScaling,x::Number) = UniformScaling(J.λ/x)
+Broadcast.broadcasted(::typeof(\), x::Number,J::UniformScaling) = UniformScaling(x\J.λ)
 
 (^)(J::UniformScaling, x::Number) = UniformScaling((J.λ)^x)
 Base.literal_pow(::typeof(^), J::UniformScaling, x::Val) = UniformScaling(Base.literal_pow(^, J.λ, x))
