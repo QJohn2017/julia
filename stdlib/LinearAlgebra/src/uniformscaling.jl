@@ -111,6 +111,9 @@ isposdef(J::UniformScaling) = isposdef(J.λ)
 (-)(J::UniformScaling, x::Number) = J.λ - x
 (-)(x::Number, J::UniformScaling) = x - J.λ
 
+(^)(J::UniformScaling, x::Number) = UniformScaling((J.λ)^x)
+Base.literal_pow(::typeof(^), J::UniformScaling, x::Val) = UniformScaling(Base.literal_pow(^, J.λ, x))
+
 (+)(J1::UniformScaling, J2::UniformScaling) = UniformScaling(J1.λ+J2.λ)
 (+)(B::BitArray{2}, J::UniformScaling)      = Array(B) + J
 (+)(J::UniformScaling, B::BitArray{2})      = J + Array(B)
@@ -229,9 +232,6 @@ Broadcast.broadcasted(::typeof(*), J::UniformScaling,x::Number) = UniformScaling
 
 Broadcast.broadcasted(::typeof(/), J::UniformScaling,x::Number) = UniformScaling(J.λ/x)
 Broadcast.broadcasted(::typeof(\), x::Number,J::UniformScaling) = UniformScaling(x\J.λ)
-
-(^)(J::UniformScaling, x::Number) = UniformScaling((J.λ)^x)
-Base.literal_pow(::typeof(^), J::UniformScaling, x::Val) = UniformScaling(Base.literal_pow(^, J.λ, x))
 
 Broadcast.broadcasted(::typeof(^), J::UniformScaling, x::Number) = UniformScaling(J.λ^x)
 function Broadcast.broadcasted(::typeof(Base.literal_pow), ::typeof(^), J::UniformScaling, x::Val)
