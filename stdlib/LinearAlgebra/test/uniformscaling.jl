@@ -136,7 +136,11 @@ end
     @test (α * I) .^ β == UniformScaling(α^β)
 end
 
-@testset "det and logdet" begin
+@testset "tr, det and logdet" begin
+    for T in (Int, Float64, ComplexF64, Bool)
+        @test tr(UniformScaling(zero(T))) === zero(T)
+    end
+    @test_throws ArgumentError tr(UniformScaling(1))
     @test det(I) === true
     @test det(1.0I) === 1.0
     @test det(0I) === 0
